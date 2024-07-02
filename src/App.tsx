@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useState } from 'react';
 import Controls from './components/Controls';
 import Grid from './components/Grid';

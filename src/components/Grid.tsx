@@ -1,4 +1,3 @@
-// src/components/Grid.tsx
 import React from 'react';
 import '../styles/Grid.css';
 import Cell from './Cell';

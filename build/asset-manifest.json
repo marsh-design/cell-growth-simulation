@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cell-growth-simulation/static/css/main.ceb26270.css",
+    "main.css": "/cell-growth-simulation/static/css/main.e9886947.css",
     "main.js": "/cell-growth-simulation/static/js/main.a1b62eab.js",
     "static/js/453.f6e6b26b.chunk.js": "/cell-growth-simulation/static/js/453.f6e6b26b.chunk.js",
     "index.html": "/cell-growth-simulation/index.html",
-    "main.ceb26270.css.map": "/cell-growth-simulation/static/css/main.ceb26270.css.map",
+    "main.e9886947.css.map": "/cell-growth-simulation/static/css/main.e9886947.css.map",
     "main.a1b62eab.js.map": "/cell-growth-simulation/static/js/main.a1b62eab.js.map",
     "453.f6e6b26b.chunk.js.map": "/cell-growth-simulation/static/js/453.f6e6b26b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ceb26270.css",
+    "static/css/main.e9886947.css",
     "static/js/main.a1b62eab.js"
   ]
 }
