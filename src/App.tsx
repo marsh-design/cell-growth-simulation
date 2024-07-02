@@ -36,9 +36,9 @@ const App: React.FC = () => {
   const resetSimulation = () => {
     if (intervalId) clearInterval(intervalId);
     setGrid(Array.from({ length: 20 }, () => Array(20).fill(false)));
-    setIsRunning(false);
     setGrowthData([]);
     setLabels([]);
+    setIsRunning(false);
   };
 
   const handleSetInterval = (newInterval: number) => {
@@ -58,6 +58,10 @@ const App: React.FC = () => {
     }
   };
 
+  const setGridSize = (rows: number, cols: number) => {
+    setGrid(Array.from({ length: rows }, () => Array(cols).fill(false)));
+  };
+
   return (
     <div className="App">
       <Grid grid={grid} setGrid={setGrid} />
@@ -66,6 +70,7 @@ const App: React.FC = () => {
         resetSimulation={resetSimulation}
         setTimeInterval={handleSetInterval}
         isRunning={isRunning}
+        setGridSize={setGridSize}
       />
       <GrowthChart data={growthData} labels={labels} />
     </div>
