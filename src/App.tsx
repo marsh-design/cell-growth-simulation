@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const [grid, setGrid] = useState<boolean[][]>(Array.from({ length: 20 }, () => Array(20).fill(false)));
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
-  const [interval, setIntervalValue] = useState<number>(1000);
+  const [intervalValue, setIntervalValue] = useState<number>(1000);
 
   const startPauseSimulation = () => {
     if (isRunning) {
@@ -18,7 +18,7 @@ const App: React.FC = () => {
     } else {
       const id = setInterval(() => {
         setGrid(prevGrid => simulateGrowth(prevGrid));
-      }, interval);
+      }, intervalValue);
       setIntervalId(id);
       setIsRunning(true);
     }
