@@ -1,6 +1,4 @@
-Sure, here's a detailed README for your project:
 
----
 
 # Cell Growth Simulation
 
