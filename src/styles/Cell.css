@@ -4,7 +4,9 @@
     height: 20px;
     border: 1px solid #ddd;
     background-color: #fff;
+    cursor: pointer;
 }
+
 .cell.occupied {
     background-color: #000;
 }
