@@ -10,23 +10,27 @@ interface GridProps {
 
 const Grid: React.FC<GridProps> = ({ grid, setGrid }) => {
     const toggleCell = (row: number, col: number) => {
-        setGrid(prevGrid => {
-            const newGrid = prevGrid.map(row => [...row]);
-            newGrid[row][col] = !prevGrid[row][col];
-            return newGrid;
-    });
-};
+        const newGrid = grid.map((rowArr, rowIndex) =>
+            rowArr.map((cell, colIndex) => {
+                if (rowIndex === row && colIndex === col) {
+                    return !cell;
+                }
+                return cell;
+            })
+        );
+        setGrid(newGrid);
+    };
 
     return (
-    <div className="grid">
-        {grid.map((row, rowIndex) => (
-            <div key={rowIndex} className="row">
+        <div className="grid">
+            {grid.map((row, rowIndex) => (
+                <div key={rowIndex} className="row">
                 {row.map((cell, colIndex) => (
-                <Cell key={colIndex} isOccupied={cell} onClick={() => toggleCell(rowIndex, colIndex)} />
+                    <Cell key={colIndex} isOccupied={cell} onClick={() => toggleCell(rowIndex, colIndex)} />
                 ))}
-            </div>
+                </div>
         ))}
-    </div>
+        </div>
     );
 };
 
