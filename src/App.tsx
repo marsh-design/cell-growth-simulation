@@ -1,9 +1,9 @@
 // src/App.tsx
-import '.styles/App.css';
 import React, { useState } from 'react';
 import Controls from './components/Controls';
 import Grid from './components/Grid';
 import { simulateGrowth } from './services/simulation';
+import './styles/App.css';
 
 const App: React.FC = () => {
   const [grid, setGrid] = useState<boolean[][]>(Array.from({ length: 20 }, () => Array(20).fill(false)));
