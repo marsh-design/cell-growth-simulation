@@ -1,0 +1,7 @@
+.controls {
+    margin-top: 20px;
+}
+
+.controls button, .controls input{
+    margin: 5px;
+}
