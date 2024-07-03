@@ -1,4 +1,4 @@
-// src/components/Controls.tsx
+
 import React from 'react';
 
 interface ControlsProps {

@@ -1,4 +1,4 @@
-// src/services/simulation.ts
+
 export const simulateGrowth = (grid: boolean[][]): boolean[][] => {
     const newGrid = grid.map(arr => [...arr]);
     for (let i = 0; i < grid.length; i++) {

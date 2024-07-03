@@ -1,4 +1,4 @@
-// src/components/GrowthChart.tsx
+
 import {
   CategoryScale,
   Chart as ChartJS,

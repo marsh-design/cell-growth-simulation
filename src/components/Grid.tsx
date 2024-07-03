@@ -1,4 +1,4 @@
-// src/components/Grid.tsx
+
 import React from 'react';
 import '../styles/Grid.css';
 import Cell from './Cell';
@@ -36,7 +36,7 @@ const Grid: React.FC<GridProps> = ({ grid, setGrid }) => {
               key={colIndex}
               isOccupied={cell}
               onClick={() => toggleCell(rowIndex, colIndex)}
-              onKeyPress={(event) => handleKeyPress(event, rowIndex, colIndex)} // Pass the handler
+              onKeyPress={(event) => handleKeyPress(event, rowIndex, colIndex)} 
             />
           ))}
         </div>
