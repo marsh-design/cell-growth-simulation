@@ -1,9 +1,19 @@
 // src/components/GrowthChart.tsx
-import { CategoryScale, Chart, Legend, LineElement, LinearScale, PointElement, Title, Tooltip } from 'chart.js';
+import {
+  CategoryScale,
+  Chart as ChartJS,
+  ChartOptions,
+  Legend,
+  LineElement,
+  LinearScale,
+  PointElement,
+  Title,
+  Tooltip
+} from 'chart.js';
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-Chart.register(LineElement, PointElement, LinearScale, CategoryScale, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 interface GrowthChartProps {
   data: number[];
@@ -15,20 +25,40 @@ const GrowthChart: React.FC<GrowthChartProps> = ({ data, labels }) => {
     labels: labels,
     datasets: [
       {
-        label: 'Colony Growth',
+        label: 'Growth Rate',
         data: data,
         fill: false,
-        backgroundColor: 'rgba(75,192,192,0.4)',
         borderColor: 'rgba(75,192,192,1)',
+        tension: 0.1,
       },
     ],
   };
 
-  return (
-    <div>
-      <Line data={chartData} />
-    </div>
-  );
+  const options: ChartOptions<'line'> = {
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Time (ms)', 
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Occupied Cells',
+        },
+        beginAtZero: true,
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top', 
+      },
+    },
+  };
+
+  return <Line data={chartData} options={options} />;
 };
 
 export default GrowthChart;
