@@ -4,7 +4,7 @@ Your README is thorough and well-structured. Here are some minor improvements an
 
 ## Overview
 
-The Cell Growth Simulation is a React application that simulates the growth of bacterial colonies on a grid. Users can toggle individual cells between occupied and unoccupied states, start and pause the simulation, reset the grid, adjust the time interval between simulation steps, and visualize the growth rate of the colony over time (according to the interval they choose to set) on a line graph chart below. The grid size can also be dynamically changed. The application includes accessibility features such as keyboard navigation and screen reader compatibility to ensure it is usable by all users.
+The Cell Growth Simulation is a React application that simulates the growth of bacterial colonies on a grid. Users can toggle individual cells between occupied and unoccupied states, start and pause the simulation, reset the grid, adjust the time interval between simulation steps, and visualize the growth rate of the colony over time on a line graph chart below. The grid size can also be dynamically changed. The application includes accessibility features such as keyboard navigation and screen reader compatibility to ensure it is usable by all users.
 
 ## Features
 
