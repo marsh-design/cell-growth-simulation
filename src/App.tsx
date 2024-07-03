@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useState } from 'react';
 import Controls from './components/Controls';
 import Grid from './components/Grid';
@@ -24,7 +23,7 @@ const App: React.FC = () => {
           const newGrid = simulateGrowth(prevGrid);
           const occupiedCells = newGrid.flat().filter(cell => cell).length;
           setGrowthData(prevData => [...prevData, occupiedCells]);
-          setLabels(prevLabels => [...prevLabels, `${prevLabels.length}`]);
+          setLabels(prevLabels => [...prevLabels, `${prevLabels.length * intervalValue}ms`]);
           return newGrid;
         });
       }, intervalValue);
@@ -50,7 +49,7 @@ const App: React.FC = () => {
           const newGrid = simulateGrowth(prevGrid);
           const occupiedCells = newGrid.flat().filter(cell => cell).length;
           setGrowthData(prevData => [...prevData, occupiedCells]);
-          setLabels(prevLabels => [...prevLabels, `${prevLabels.length}`]);
+          setLabels(prevLabels => [...prevLabels, `${prevLabels.length * newInterval}ms`]);
           return newGrid;
         });
       }, newInterval);
