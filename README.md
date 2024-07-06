@@ -1,4 +1,3 @@
-Your README is thorough and well-structured. Here are some minor improvements and corrections for clarity and accuracy:
 
 # Cell Growth Simulation
 
