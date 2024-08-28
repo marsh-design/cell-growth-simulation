@@ -118,8 +118,5 @@ The Cell Growth Simulation is a React application that simulates the growth of b
 - **Screen Reader Compatibility**: Enhanced by using ARIA attributes and semantic HTML elements.
 - **Overall Accessibility**: Ensures that the application is usable by people with disabilities, providing a better user experience for everyone.
 
----
-
-By following this README, users should be able to understand the purpose and functionality of the Cell Growth Simulation, set it up locally, and extend or modify the project as needed. The README adheres to the guidelines provided, ensuring that all aspects of the project are well-documented and easily accessible to users and developers alike.
 
 
